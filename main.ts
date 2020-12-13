@@ -116,6 +116,9 @@ class BusinessDayCounter {
   }
 }
 
+module.exports = BusinessDayCounter;
+
+// * Complex data structure for dynamic public holiday generation.
 let dynamicHolidays: Array<object> = [
   { type: 'static', date: '25th April', repeat: 'yearly' },
   { type: 'dynamic', date: '1st January', repeat: 'yearly' },
@@ -123,8 +126,8 @@ let dynamicHolidays: Array<object> = [
 ];
 
 // Run the script with the relevant information.
-let firstDate: Date = new Date('2013/10/07');
-let secondDate: Date = new Date('2014/01/01');
+let firstDate: Date = new Date('2013/12/24');
+let secondDate: Date = new Date('2013/12/27');
 
 // This will only take an array. Use a generator function to create a list of static date for Task 3 in the PDF.
 let publicHolidays: Array<Date> = [new Date('2013/12/25'), new Date('2013/12/26'), new Date('2014/01/01')];
@@ -132,4 +135,5 @@ let publicHolidays: Array<Date> = [new Date('2013/12/25'), new Date('2013/12/26'
 // Run the class!
 var run = new BusinessDayCounter('business', firstDate, secondDate, publicHolidays);
 
+// Show the result in the console.
 console.log(run.diff);

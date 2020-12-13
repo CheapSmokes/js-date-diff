@@ -4,7 +4,9 @@
   "description": "A class to find the difference between two dates with an option to skip public holidays.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -17,11 +19,28 @@
   },
   "homepage": "https://github.com/CheapSmokes/js-date-diff#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "parcel": "^1.12.4",
     "parcel-plugin-clean-dist": "0.0.6",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "jest-transform-stub": "^2.0.0"
   },
   "dependencies": {
     "moment": "^2.29.1",
     "moment-business-days": "^1.2.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
