@@ -23,18 +23,27 @@ npm install
 **Parcel JS:**
 To run Parcel, on your command line, use this command:
 ```
-parcel {path}/index.html
+npm start
 ```
 This will build your project, and start a local dev server at http://localhost:1234/. The cool part about this is that anytime you make changes to your files, Parcel will automatically rebuild and update the local site for you.
+
+
+**Testing:**
+```
+npm test
+```
+Testing Jest out on this project because that's what the guys use at their workplace. 
+**May not work on some machines with the current NPM package setup. Needs to be fixed to work everywhere.**
 
 # Deployment (Advanced users only)
 Compiling the project for deployment is easy. Run the following command from your terminal.
 
 **Terminal:**
 ```
-parcel build {path}/index.html
+npm build
 ```
 No steps required for deployment on this project.
+
 
 ## Support
 If you come across any issues, please contact @CheapSmokes for assistance.
