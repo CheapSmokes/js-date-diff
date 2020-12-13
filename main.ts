@@ -116,9 +116,13 @@ class BusinessDayCounter {
   }
 }
 
+// Export it for unit testing.
 module.exports = BusinessDayCounter;
 
-// * Complex data structure for dynamic public holiday generation.
+
+// * Internal testing.
+
+// Complex data structure for dynamic public holiday generation.
 let dynamicHolidays: Array<object> = [
   { type: 'static', date: '25th April', repeat: 'yearly' },
   { type: 'dynamic', date: '1st January', repeat: 'yearly' },
